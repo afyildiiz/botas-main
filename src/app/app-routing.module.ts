@@ -12,13 +12,7 @@ const routes: Routes = [
   { path: 'kiyafet', component: KiyafetTableComponent },
   { path: 'order-table', component: OrderTableComponent },
   { path: 'suppliers', component: SuppliersComponent },
-
-  // { path: 'bagis', component: BagisComponent },
-  // { path: 'bagis-grid', component: BagisGridComponent },
-  // { path: 'bagis/:id', component: BagisComponent },
-  // { path: 'bagis-update', component: BagisUpdateComponent },
-  // { path: 'grid', component: GridComponent },
-  // { path: '', component: AboutComponent },];
+  { path: '', component: KiyafetTableComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

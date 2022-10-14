@@ -27,8 +27,8 @@ export class ConnectDbService {
   constructor(private http:HttpClient) { }
 
   getToken() { // ************
-    return "81427862382447718717"
-    //return localStorage.getItem('token')
+    return "34525532127632187347"
+    // return localStorage.getItem('token')
   }
 
   

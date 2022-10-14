@@ -79,18 +79,18 @@
         <td mat-cell *matCellDef="let element"> {{element.tl_fiyat}} </td>
       </ng-container>
       <ng-container matColumnDef="durum">
-        <th class="bold" mat-header-cell *matHeaderCellDef> Durum </th>
+        <th class=" bold" mat-header-cell *matHeaderCellDef> Durum </th>
         <td mat-cell *matCellDef="let element"> {{element.durum}} </td>
       </ng-container>
       <ng-container class=" bold" matColumnDef="Guncelle">
-        <th class="a bold" mat-header-cell *matHeaderCellDef> </th>
+        <th class="a bold w" mat-header-cell *matHeaderCellDef> </th>
         <td mat-cell *matCellDef="let element"> <button style="background-color:rgb(68, 70, 70);" mat-mini-fab color="primary" aria-label="Example icon button with a delete icon" (click)="openDialog2(element)" >
           <mat-icon>edit</mat-icon>
         </button>
       </td>
       </ng-container>
       <ng-container class="bold" matColumnDef="Sil">
-        <th mat-header-cell *matHeaderCellDef></th>
+        <th class="w" mat-header-cell *matHeaderCellDef></th>
         <td mat-cell *matCellDef="let element"><button mat-mini-fab color="warn" aria-label="Example icon button with a delete icon" (click)="deleteOrder(element.siparis_id)">
           <mat-icon>delete</mat-icon>
         </button>
@@ -105,6 +105,6 @@
                    aria-label="Select page of periodic elements">
     </mat-paginator>
   </div>
-
-  
+<br>
+  <button class="btn btn-primary" (click)="openDialogg()">PDF Aç</button>
 

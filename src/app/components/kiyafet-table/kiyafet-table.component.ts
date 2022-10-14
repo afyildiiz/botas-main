@@ -25,7 +25,7 @@ export class KiyafetTableComponent implements OnInit {
   
 
   dataSource = new MatTableDataSource<Clothes>(this.clothesArray);
-  displayedColumns: string[] = ["kiyafet_adi","kullanim_suresi","Güncelle","Sil","Ozellik"];  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  displayedColumns: string[] = ["kiyafet_adi","kullanim_suresi","Güncelle","Sil"];  @ViewChild(MatPaginator) paginator!: MatPaginator;
   constructor(public dialog: MatDialog, private router: Router, private connectService: ConnectDbService) { }
     formGrup!:FormGroup;
 
@@ -69,6 +69,7 @@ export class KiyafetTableComponent implements OnInit {
     }
   }
   refresh(){
+    this.cancel()
     this.connectService.getClothesForTable().subscribe((data: Clothes[]) => {
       this.dataSource.data = data;
     })
@@ -87,6 +88,10 @@ export class KiyafetTableComponent implements OnInit {
         width:"750px",
         data:{ }
       })
+    }
+    cancel(){
+      this.dialog.closeAll();
+  
     }
 
   }

@@ -22,4 +22,13 @@ table {
   font-size: x-large;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+.ab{
+  margin-right: 1rem;
+}
 
+  .w {
+    overflow:hidden;
+    width: 80px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }

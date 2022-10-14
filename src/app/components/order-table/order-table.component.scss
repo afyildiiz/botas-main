@@ -80,3 +80,10 @@ table{
     width: 1200px;
     margin-left: 20px;
   }
+.w{
+ 
+        overflow: hidden;
+        width: 80px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+}

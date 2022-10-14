@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Order } from 'src/app/models/order';
 import { ConnectDbService } from 'src/app/services/connect-db.service';
+import { DownloadPdfComponent } from '../download-pdf/download-pdf.component';
 
 @Component({
   selector: 'app-order-table',
@@ -23,6 +24,7 @@ export class OrderTableComponent implements OnInit {
   orderTeslimEdildiArray:Order[]=[]
   displayedColumns:string[] = ["tedarikci_adi","kiyafet_adi","adet","beden","siparis_tarihi","sezon","ozellik","birim","fiyat","para_birimi","kur","tl_fiyat","durum","Guncelle","Sil"];
   dataSource = new MatTableDataSource<Order>(this.orderArray)
+  
   constructor(
   public dialog: MatDialog,
   private fb: FormBuilder,
@@ -36,6 +38,12 @@ export class OrderTableComponent implements OnInit {
   }
   openDialog(){
     this.dialog.open(OrderInputComponent,{
+      data:{ }
+    })
+  }
+  openDialogg(){
+    this.dialog.open(DownloadPdfComponent,{
+      width:"1050px",
       data:{ }
     })
   }

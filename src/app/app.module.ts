@@ -47,7 +47,8 @@ import { SuppliersInputComponent } from './components/suppliers-input/suppliers-
 import { SupplierInputUpdateComponent } from './components/supplier-input-update/supplier-input-update.component';
 import { OrderUpdateComponent } from './components/order-update/order-update.component';
 import { FeaturesAddComponent } from './components/features-add/features-add.component';
-import { FeaturesInputComponent } from './components/features-input/features-input.component'
+import { FeaturesInputComponent } from './components/features-input/features-input.component';
+import { DownloadPdfComponent } from './components/download-pdf/download-pdf.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +74,8 @@ import { FeaturesInputComponent } from './components/features-input/features-inp
     SupplierInputUpdateComponent,
     OrderUpdateComponent,
     FeaturesAddComponent,
-    FeaturesInputComponent
+    FeaturesInputComponent,
+    DownloadPdfComponent
   ],
   imports: [
     BrowserModule,
